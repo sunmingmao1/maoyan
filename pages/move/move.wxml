@@ -1,0 +1,55 @@
+<!--pages/move/move.wxml-->
+<view class='container_move'>
+  <view class='container_move_top'>
+    <view class='containser_move_location'>
+      <text class='text_location'>定位</text>
+      <image class='image_pull' src='/image/ic_pull.png'></image>
+    </view>
+
+    <view class='containser_select'>
+      <view class='select_item' bindtap='thermal'>
+        <text class="{{selectPage==0 ? 'text_select_item' : 'text_select_item_unselected'}}">热映</text>
+        <view class='select_line' style="opacity:{{selectPage==1? '0':'1'}}"></view>
+      </view>
+      <view class='select_item' bindtap='reflect'>
+        <text class="{{selectPage==1 ? 'text_select_item' : 'text_select_item_unselected'}}">待映</text>
+        <view class='select_line' style="opacity:{{selectPage==1? '1':'0'}}"></view>
+      </view>
+    </view>
+
+    <image class='search' src='/image/ic_search.png'></image>
+  </view>
+  <view class='line'></view>
+  <swiper class='swiper_container' current='{{selectPage}}' bindchange='swiper_change'>
+    <swiper-item>
+      <view class='container_column'>
+
+        <view class='container_thermal'>
+
+          <view>
+            <image class='thermal_image' src='/image/ic_placard.jpg'></image>
+          </view>
+
+          <view class='container_thermal_detail'>
+            <text class='thermal_move_name'>南极之恋</text>
+            <text class='thermal_move_type'>爱情，冒险</text>
+            <text class='thermal_move_star'>主演: 赵又廷，杨幂</text>
+            <text class='thermal_move_num'>今天28家影院播放234次</text>
+          </view>
+
+          <view class='container_thermal_right'>
+            <text class='thermal_grade'>9.8分</text>
+            <view class='thermal_btn_buy'>
+              <text class='text_buy'>购票</text>
+            </view>
+          </view>
+
+        </view>
+      <view class='line'></view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <text>待映</text>
+    </swiper-item>
+  </swiper>
+</view>
