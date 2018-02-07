@@ -3,6 +3,10 @@
     "pages/move/move",
     "pages/cinema/cinema",
     "pages/mine/mine",
+    "pages/details/details",
+    "pages/select/select",
+    "pages/location/location",
+    "pages/search/search",
     "pages/logs/logs"
   ],
   "window":{

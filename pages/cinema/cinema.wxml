@@ -1,2 +1,49 @@
 <!--pages/cinema/cinema.wxml-->
-<text>pages/cinema/cinema.wxml</text>
+<view class='container_cinema'>
+
+  <view class='container_top'>
+
+    <view class='container_location'>
+      <text class='text_location'>定位</text>
+      <image class='image_location' src='/image/ic_pull.png'></image>
+    </view>
+
+    <view class='container_search'>
+      <image class='image_search' src='/image/ic_cinema_search.png'></image>
+      <text class='text_search'>找影院</text>
+    </view>
+
+  </view>
+
+  <view class='base_line'></view>
+
+  <view class='container_list'>
+
+    <view class='container_list_content'>
+
+      <view class='container_content'>
+
+        <view class='container_name_content'>
+          <text class='text_ciname_name'>横店电影城(丁豪广场店)</text>
+          <text class='text_money'>34</text>
+          <text class='text_money_start'>元起</text>
+        </view>
+
+        <text class='text_address'>历下区工业南路与舜华南路交叉口</text>
+
+        <!-- <text class='text_table'>座</text> -->
+
+        <view class='container_card'>
+          <text class='card_hint'>卡</text>
+          <text class='text_card'>开卡特惠，首单2张立减20元</text>
+        </view>
+
+      </view>
+      
+      <text class='text_distance'>3.6km</text>
+
+    </view>
+
+  </view>
+
+</view>

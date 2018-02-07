@@ -1,1 +1,170 @@
 /* pages/cinema/cinema.wxss */
+
+.container_cinema {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.container_top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 96rpx;
+  background: #f7f7f7;
+}
+
+.container_location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 96rpx;
+  height: 96rpx;
+  padding-left: 10px;
+}
+
+.text_location {
+  font-size: 12px;
+  color: #333;
+}
+
+.image_location {
+  width: 12px;
+  height: 12px;
+  margin-left: 2px;
+}
+
+.container_search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  height: 64rpx;
+  background: #fff;
+  border-color: #e6e6e6;
+  border-width: 1px;
+  border-radius: 5px;
+  margin-top: 16rpx;
+  margin-bottom: 16rpx;
+  margin-right: 10px;
+  justify-content: center;
+}
+
+.image_search {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.text_search {
+  font-size: 10px;
+  color: #999;
+  margin-left: 10px;
+}
+
+.base_line {
+  background: #e6e6e6;
+  width: 100%;
+  height: 1rpx;
+}
+
+.container_list {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.container_list_content {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.container_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.container_name_content {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.text_ciname_name {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.text_money {
+  font-size: 14px;
+  color: #ee3b3b;
+  font-weight: bold;
+}
+
+.text_money_start {
+  font-size: 8px;
+  color: #ee3b3b;
+  font-weight: bold;
+}
+
+.text_address {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.container_table {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+}
+
+.text_table {
+  font-size: 8px;
+  color: #fff;
+  background: #9409e4;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+  padding-bottom: 4rpx;
+  padding-top: 4rpx;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.container_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.text_card {
+  font-size: 10px;
+  color: #999;
+}
+
+.card_hint {
+  font-size: 8px;
+  color: #fff;
+  background: #9409e4;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+  padding-bottom: 4rpx;
+  padding-top: 4rpx;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.text_distance {
+  font-size: 10px;
+  color: #666;
+  width: 40px;
+  text-align: center;
+}

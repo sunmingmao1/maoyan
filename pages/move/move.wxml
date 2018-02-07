@@ -1,11 +1,12 @@
 <!--pages/move/move.wxml-->
 <view class='container_move'>
   <view class='container_move_top'>
-    <view class='containser_move_location'>
-      <text class='text_location'>定位</text>
-      <image class='image_pull' src='/image/ic_pull.png'></image>
-    </view>
-
+    <navigator url='/pages/location/location'>
+      <view class='containser_move_location'>
+        <text class='text_location'>定位</text>
+        <image class='image_pull' src='/image/ic_pull.png'></image>
+      </view>
+    </navigator>
     <view class='containser_select'>
       <view class='select_item' bindtap='thermal'>
         <text class="{{selectPage==0 ? 'text_select_item' : 'text_select_item_unselected'}}">热映</text>
@@ -16,40 +17,98 @@
         <view class='select_line' style="opacity:{{selectPage==1? '1':'0'}}"></view>
       </view>
     </view>
-
-    <image class='search' src='/image/ic_search.png'></image>
+    <navigator url='/pages/search/search'>
+      <image class='search' src='/image/ic_search.png'></image>
+    </navigator>
   </view>
   <view class='line'></view>
-  <swiper class='swiper_container' current='{{selectPage}}' bindchange='swiper_change'>
-    <swiper-item>
-      <view class='container_column'>
 
-        <view class='container_thermal'>
+  <view class='swiper_container' hidden="{{selectPage!=0}}">
+
+
+    <block wx:for="{{list}}" wx:key="{{item}}" wx:for-item="item">
+      <navigator url='/pages/details/details'>
+        <view class='container_column'>
+
+          <view class='container_thermal'>
+
+            <view>
+              <image class='thermal_image' src="{{item.move_image}}"></image>
+            </view>
+
+            <view class='container_thermal_detail'>
+              <text class='thermal_move_name'>{{item.move_name}}</text>
+              <text class='thermal_move_type'>{{item.move_type}}</text>
+              <text class='thermal_move_star'>{{item.move_star}}</text>
+              <text class='thermal_move_num'>{{item.move_num}}人想看</text>
+            </view>
+
+            <view class='container_thermal_right'>
+              <text class='thermal_grade'>9.8分</text>
+
+              <view class='thermal_btn_buy' catchtap='buy_move'>
+                <text class='text_buy'>购票</text>
+              </view>
+
+            </view>
+          </view>
+          <view class='line'></view>
+        </view>
+      </navigator>
+    </block>
+
+  </view>
+
+  <view class='container_reflect' hidden="{{selectPage!=1}}">
+
+    <text class='text_reflect_refresh'>最近最受欢迎</text>
+
+    <scroll-view scroll-x style=" white-space: nowrap; display: flex;width: 100%">
+      <view class='reflect_top_scroll' wx:for="{{list}}" wx:key="{{item}}">
+        <navigator url='/pages/details/details'>
+          <view class='reflect_top_content'>
+            <view>
+              <image class="reflect_top_image" src="{{item.move_image}}"></image>
+            </view>
+            <text class='text_reflect_move_name'>{{item.move_name}}</text>
+            <text class='text_reflect_move_num'>{{item.move_num}}人想看</text>
+            <text class='text_reflect_move_num'>{{item.move_date}}</text>
+          </view>
+        </navigator>
+      </view>
+
+    </scroll-view>
+    <view class='reflect_view'></view>
+
+    <view class='container_reflect_all' wx:for="{{list}}" wx:key="{{item}}">
+      <!-- <text class='reflect_list_data' >2月9日 周五</text> -->
+      <navigator url='/pages/details/details'>
+        <view class='container_reflect_list'>
 
           <view>
-            <image class='thermal_image' src='/image/ic_placard.jpg'></image>
+            <image class='thermal_image' src="{{item.move_image}}"></image>
           </view>
 
           <view class='container_thermal_detail'>
-            <text class='thermal_move_name'>南极之恋</text>
-            <text class='thermal_move_type'>爱情，冒险</text>
-            <text class='thermal_move_star'>主演: 赵又廷，杨幂</text>
-            <text class='thermal_move_num'>今天28家影院播放234次</text>
+            <text class='thermal_move_name'>{{item.move_name}}</text>
+            <text class='thermal_move_type'>{{item.move_type}}</text>
+            <text class='thermal_move_star'>{{item.move_star}}</text>
+            <text class='thermal_move_num'>{{item.move_num}}人想看</text>
           </view>
 
           <view class='container_thermal_right'>
             <text class='thermal_grade'>9.8分</text>
-            <view class='thermal_btn_buy'>
+            <view class='thermal_btn_buy' catchtap='buy_move'>
               <text class='text_buy'>购票</text>
             </view>
           </view>
 
         </view>
-      <view class='line'></view>
-      </view>
-    </swiper-item>
-    <swiper-item>
-      <text>待映</text>
-    </swiper-item>
-  </swiper>
+        <view class='line'></view>
+      </navigator>
+    </view>
+
+  </view>
+
+
 </view>
