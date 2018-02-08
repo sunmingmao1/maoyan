@@ -51,14 +51,14 @@
 }
 
 .image_search {
-  width: 32rpx;
-  height: 32rpx;
+  width: 36rpx;
+  height: 36rpx;
 }
 
 .text_search {
   font-size: 10px;
   color: #999;
-  margin-left: 10px;
+  margin-left: 4px;
 }
 
 .base_line {
@@ -126,16 +126,46 @@
   height: 20px;
 }
 
+.container_table {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.view_table{
+  display: flex;
+  flex-direction: row;
+  border:1rpx solid #87CEEB;
+  border-radius: 3px;
+  text-align: center;
+  padding-left: 4rpx;
+  padding-right: 4rpx;
+  padding-top: 2rpx;
+  padding-bottom: 2rpx;
+  margin-right: 2px;
+}
+
 .text_table {
   font-size: 8px;
-  color: #fff;
-  background: #9409e4;
-  padding-left: 8rpx;
-  padding-right: 8rpx;
-  padding-bottom: 4rpx;
-  padding-top: 4rpx;
-  margin-right: 5px;
+  color: #008B8B;
+}
+
+.view_table_y{
+  display: flex;
+  flex-direction: row;
+  border:1rpx solid #EEE8AA;
   border-radius: 3px;
+  text-align: center;
+  padding-left: 4rpx;
+  padding-right: 4rpx;
+  padding-top: 2rpx;
+  padding-bottom: 2rpx;
+  margin-right: 2px;
+}
+
+.text_table_y{
+  font-size: 8px;
+  color: #FFA500;
 }
 
 .container_card {

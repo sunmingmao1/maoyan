@@ -17,32 +17,40 @@
 
   <view class='base_line'></view>
 
-  <view class='container_list'>
+  <view class='container_list' wx:for="{{cinames}}" wx:key="item">
+    <navigator url='/pages/cinemaDetails/cinemaDetails'>
+      <view class='container_list_content'>
 
-    <view class='container_list_content'>
+        <view class='container_content'>
 
-      <view class='container_content'>
+          <view class='container_name_content'>
+            <text class='text_ciname_name'>{{item.ciname_name}}</text>
+            <text class='text_money'>{{item.money}}</text>
+            <text class='text_money_start'>元起</text>
+          </view>
 
-        <view class='container_name_content'>
-          <text class='text_ciname_name'>横店电影城(丁豪广场店)</text>
-          <text class='text_money'>34</text>
-          <text class='text_money_start'>元起</text>
+          <text class='text_address'>{{item.address}}</text>
+
+          <view class='container_table'>
+            <block wx:for="{{item.table}}" wx:key="item_table" wx:for-item="item_table">
+              <view class='view_table' style=" border-color:{{item_table.table_type==1 ? '#AFEEEE' :      '#EEE8AA'}}">
+                <text class='text_table' style="color:{{item_table.table_type==1 ? '#008B8B' : '#FFA500'}}">                {{item_table.table_name}}</text>
+              </view>
+            </block>
+          </view>
+
+          <view class='container_card'>
+            <text class='card_hint'>卡</text>
+            <text class='text_card'>开卡特惠，首单2张立减20元</text>
+          </view>
+
         </view>
 
-        <text class='text_address'>历下区工业南路与舜华南路交叉口</text>
-
-        <!-- <text class='text_table'>座</text> -->
-
-        <view class='container_card'>
-          <text class='card_hint'>卡</text>
-          <text class='text_card'>开卡特惠，首单2张立减20元</text>
-        </view>
+        <text class='text_distance'>{{item.distance}}</text>
 
       </view>
-      
-      <text class='text_distance'>3.6km</text>
-
-    </view>
+    </navigator>
+    <view class='base_line'></view>
 
   </view>
 
